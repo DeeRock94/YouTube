@@ -30,7 +30,7 @@ class Provider extends AbstractProvider
     protected function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase(
-            'https://accounts.google.com/o/oauth2/v2/auth&access_type=offline',
+            'https://accounts.google.com/o/oauth2/v2/auth?access_type=offline',
             $state
         );
     }
