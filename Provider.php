@@ -29,10 +29,12 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase(
-            'https://accounts.google.com/o/oauth2/v2/auth?access_type=offline',
+        $authUrl = $this->buildAuthUrlFromBase(
+            'https://accounts.google.com/o/oauth2/v2/auth',
             $state
         );
+
+        return $authUrl . '&access_type=offline';
     }
 
     /**
